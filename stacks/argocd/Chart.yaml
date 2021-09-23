@@ -1,5 +1,6 @@
 apiVersion: v2
 name: argo-cd
+icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.png
 version: 1.0.0
 dependencies:
   - name: argo-cd

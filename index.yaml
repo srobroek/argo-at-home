@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  argo-cd:
+  - apiVersion: v2
+    created: "2021-09-23T17:56:57.9536538+04:00"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 3.21.0
+    digest: 48ec6723dd8a0a21d1b7351311cd2091800cde14d107734b41832c92f2e255ae
+    icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.png
+    name: argo-cd
+    urls:
+    - https://srobroek.github.io/argo-at-home/charts/argo-cd-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-09-23T17:56:57.9219513+04:00"
