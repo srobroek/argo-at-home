@@ -1,31 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: metallb
+  name: contour
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   labels:
-    app.kubernetes.io/name: metallb
+    app.kubernetes.io/name: contour
     app.kubernetes.io/component: application
     app.kubernetes.io/part-of: infrastructure
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: metallb-system
+    namespace: projectcontour
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
-    chart: metallb
-    targetRevision: 2.5.4
-    helm:
-      values: |
-        configInline:
-          address-pools:
-            - name: default
-              protocol: layer2
-              addresses:
-              - 172.21.3.201-172.21.3.240
+    chart: contour
+    targetRevision: 5.5.3
   syncPolicy:
     automated:
       prune: true
