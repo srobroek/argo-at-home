@@ -12,7 +12,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: projectcontour
+    namespace: default
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
