@@ -15,9 +15,17 @@ spec:
     namespace: argocd
   project: default
   source:
-    repoURL: https://github.com/srobroek/argo-at-home
-    path: charts/argocd
-    targetRevision: HEAD
+    repoURL: https://metallb.github.io/metallb
+    chart: metallb
+    targetRevision: 0.10.2
+    helm:
+      values: |
+        configInline:
+          address-pools:
+            - name: default
+              protocol: layer2
+              addresses:
+              - 172.21.3.201-172.21.3.240
   syncPolicy:
     automated:
       prune: true

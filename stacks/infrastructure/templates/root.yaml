@@ -16,7 +16,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/srobroek/argo-at-home.git
-    path: stacks/argocd
+    path: stacks/infrastructure
     targetRevision: HEAD
   syncPolicy:
     automated:
