@@ -1,7 +1,7 @@
 apiVersion: v2
 name: argo-cd
 icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.png
-version: 0.0.2a
+version: 0.0.1
 description: "bootstraps argocd for self management"
 dependencies:
   - name: argo-cd
