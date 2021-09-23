@@ -1,6 +1,5 @@
 argo-cd:
   installCRDs: true
-  namespace: argocd
   server:
     extraArgs:
       - --insecure
