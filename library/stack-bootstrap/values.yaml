@@ -1,0 +1,15 @@
+# Default values for stack-bootstrap.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+AppProject:
+  create: false
+  projectName: "my-project"
+  argocdNnamespace: "argocd"
+  finalizer: false
+  sourceRepos:
+    - https://github.com/srobroek/argo-at-home.git
+    - https://git.hub
+  destinations:
+    - namespace: "default"
+      server: https://kubernetes.default.svc
