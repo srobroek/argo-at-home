@@ -14,4 +14,18 @@ entries:
     urls:
     - https://github.com/srobroek/argo-at-home/releases/download/argo-cd-0.0.1/argo-cd-0.0.1.tgz
     version: 0.0.1
-generated: "2021-09-23T16:45:48.664031667Z"
+  cert-manager:
+  - apiVersion: v2
+    created: "2021-09-23T17:04:49.83674525Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 3.21.0
+    description: bootstraps argocd for self management
+    digest: 008eec2c6ae2ceb2d34675a1c5c2535806aae7d03b7c518027d80d50224ab660
+    icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.png
+    name: cert-manager
+    urls:
+    - https://github.com/srobroek/argo-at-home/releases/download/cert-manager-0.0.3/cert-manager-0.0.3.tgz
+    version: 0.0.3
+generated: "2021-09-23T17:04:49.836756051Z"
