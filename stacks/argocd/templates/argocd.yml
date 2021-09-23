@@ -15,7 +15,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    repoURL: https://github.com/srobroek
+    repoURL: https://github.com/srobroek/argo-at-home
     path: charts/argocd
     targetRevision: HEAD
   syncPolicy:
