@@ -1,7 +1,8 @@
+# Source: infrastructure/templates/root.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: Infrastructure
+  name: infrastructure
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io

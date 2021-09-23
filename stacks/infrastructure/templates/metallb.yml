@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd
+  name: Metallb
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -12,7 +12,6 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
   project: default
   source:
     repoURL: https://metallb.github.io/metallb
