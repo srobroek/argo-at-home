@@ -4,7 +4,7 @@ icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-c
 version: "1.0.0"
 description: "bootstraps argocd helm for self management"
 maintainers: 
-  - name: "Sjors Robroek"
+  - name: "srobroek"
     email: "s.robroek@vxsan.com"
     url: "https://github.com/srobroek"
 dependencies:
