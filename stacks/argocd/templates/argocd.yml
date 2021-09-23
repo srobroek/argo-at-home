@@ -15,9 +15,9 @@ spec:
     namespace: argocd
   project: default
   source:
-    repoURL: https://srobroek.github.io/argo-at-home
-    chart: argocd-bootstrap
-    targetRevision: 1.0.0
+    repoURL: https://github.com/srobroek
+    path: charts/argocd-bootstrap
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
