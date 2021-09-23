@@ -1,8 +1,9 @@
 apiVersion: v2
 name: cert-manager
 icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.png
-version: 0.0.3
+version: 1.0.0
 description: "bootstraps argocd for self management"
+Maintainers: "s.robroek@vxsan.com"
 dependencies:
   - name: argo-cd
     version: 3.21.0
