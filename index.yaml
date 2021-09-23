@@ -14,7 +14,42 @@ entries:
     urls:
     - https://github.com/srobroek/argo-at-home/releases/download/argo-cd-0.0.1/argo-cd-0.0.1.tgz
     version: 0.0.1
+  argocd-bootstrap:
+  - apiVersion: v2
+    created: "2021-09-23T17:11:09.885953279Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 3.21.0
+    description: bootstraps argocd for self management
+    digest: 8939c26cdf9b36df75e4b420df2016a7ab5a08639986b057c6ffb9e9f6568d84
+    icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.png
+    maintainers:
+    - email: s.robroek@vxsan.com
+      name: srobroek
+      url: https://github.com/srobroek
+    name: argocd-bootstrap
+    urls:
+    - https://github.com/srobroek/argo-at-home/releases/download/argocd-bootstrap-1.0.0/argocd-bootstrap-1.0.0.tgz
+    version: 1.0.0
   cert-manager:
+  - apiVersion: v2
+    created: "2021-09-23T17:11:10.06070942Z"
+    dependencies:
+    - name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 3.21.0
+    description: bootstraps argocd for self management
+    digest: 76fa9e96f07fe6496d12c878a567ac4b4aa29b5685ab44a4696b7123ab280f4b
+    icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.png
+    maintainers:
+    - email: s.robroek@vxsan.com
+      name: srobroek
+      url: https://github.com/srobroek
+    name: cert-manager
+    urls:
+    - https://github.com/srobroek/argo-at-home/releases/download/cert-manager-1.0.0/cert-manager-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     created: "2021-09-23T17:04:49.83674525Z"
     dependencies:
@@ -28,4 +63,4 @@ entries:
     urls:
     - https://github.com/srobroek/argo-at-home/releases/download/cert-manager-0.0.3/cert-manager-0.0.3.tgz
     version: 0.0.3
-generated: "2021-09-23T17:04:49.836756051Z"
+generated: "2021-09-23T17:11:10.060724623Z"
