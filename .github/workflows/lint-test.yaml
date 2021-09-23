@@ -26,13 +26,17 @@ jobs:
 
       - name: Set up chart-testing
         uses: helm/chart-testing-action@v2.0.1
+        
+      - name: Add dependency chart repos
+        run: |
+          helm repo add bitnami https://charts.bitnami.com/bitnami        
+          helm repo add argo-cd https://argoproj.github.io/argo-helm
 
       - name: Run chart-testing (lint)
         run: ct lint --config ct.yaml
 
       - name: Create kind cluster
-        uses: helm/kind-action@v1.1.0
-        if: steps.list-changed.outputs.changed == 'true'
+        uses: helm/kind-action@v1.2.0
 
       - name: Run chart-testing (install)
         run: ct install --config ct.yaml
