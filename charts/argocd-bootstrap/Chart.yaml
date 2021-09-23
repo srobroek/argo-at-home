@@ -3,7 +3,10 @@ name: argo-cd
 icon: https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.png
 version: 1.0.0
 description: "bootstraps argocd helm for self management"
-Maintainers: "s.robroek@vxsan.com"
+maintainers: 
+  - name: "Sjors Robroek"
+    email: "s.robroek@vxsan.com"
+    url: "https://srobroek.github.io/argo-at-home"
 dependencies:
   - name: argo-cd
     version: 3.21.0
