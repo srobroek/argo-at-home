@@ -16,7 +16,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/srobroek
-    path: charts/argocd-bootstrap
+    path: charts/argocd
     targetRevision: HEAD
   syncPolicy:
     automated:
