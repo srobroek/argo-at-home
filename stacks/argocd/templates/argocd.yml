@@ -1,8 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd.root
-  namespace: argocd
+  name: root
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   labels:
@@ -15,9 +14,9 @@ spec:
     namespace: default
   project: default
   source:
-    repoURL: https://github.com/srobroek/argo-at-home.git
-    path: stacks/argocd
-    targetRevision: HEAD
+    repoURL: https://srobroek.github.io/argo-at-home
+    chart: argocd-bootstrap
+    targetRevision: 1.0.0
   syncPolicy:
     automated:
       prune: true

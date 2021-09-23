@@ -1,3 +1,4 @@
+# Source: root/templates/root.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -24,5 +25,4 @@ spec:
       selfHeal: true
     syncOptions:
     - CreateNamespace=true
-    - PruneLast=true      
-    
+    - PruneLast=true
