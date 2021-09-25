@@ -1,0 +1,54 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  labels: 
+    app.kubernetes.io/name: gaps
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: media
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: media
+  project: media
+  source:
+    repoURL: 'https://k8s-at-home.com/charts/'
+    chart: gaps  
+    targetRevision: v1.5.3
+    helm:
+      values: |
+        image:
+          tag: latest
+        env:
+          TZ: "Asia/Dubai"
+        ingress:
+          main:
+            enabled: true
+            hosts:
+              host: media.int.vxsan.com
+              paths:
+                path: /prowlarr
+                pathType: Prefix
+            tls:
+              - secretname: media-ingress-tls
+                hosts:
+                  - media.int.vxsan.com
+                  - media.vxsan.com
+                
+        persistence:
+          config:
+            enabled: true
+            type: pvc
+            size: 1Gi
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+    - PruneLast=true
