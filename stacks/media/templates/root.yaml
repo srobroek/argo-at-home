@@ -13,7 +13,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-  project: root
+  project: media
   source:
     repoURL: https://github.com/srobroek/argo-at-home
     path: stacks/media
