@@ -1,8 +1,7 @@
-# Source: infrastructure/templates/root.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: infrastructure
+  name: argocd.root
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -17,7 +16,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/srobroek/argo-at-home.git
-    path: stacks/infrastructure
+    path: stacks/media
     targetRevision: HEAD
   syncPolicy:
     automated:
