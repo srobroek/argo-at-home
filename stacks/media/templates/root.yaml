@@ -8,7 +8,7 @@ metadata:
   labels:
     app.kubernetes.io/name: root
     app.kubernetes.io/component: application
-    app.kubernetes.io/part-of: argocd
+    app.kubernetes.io/part-of: media
 spec:
   destination:
     server: https://kubernetes.default.svc
