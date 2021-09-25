@@ -18,7 +18,7 @@ spec:
   source:
     repoURL: 'https://k8s-at-home.com/charts/'
     chart: prowlarr  
-    targetRevision: v1.5.3
+    targetRevision: "4.0.1"
     helm:
       values: |
         image:
@@ -37,7 +37,7 @@ spec:
               - secretname: media-ingress-tls
                 hosts:
                   - media.int.vxsan.com
-                  - media.vxsan.comk apply -
+                  - media.vxsan.com
                 
         persistence:
           config:
