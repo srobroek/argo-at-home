@@ -15,7 +15,7 @@ spec:
     namespace: argocd
   project: root
   source:
-    repoURL: https://github.com/srobroek/argo-at-home.git
+    repoURL: https://github.com/srobroek/argo-at-home
     path: stacks/media
     targetRevision: HEAD
   syncPolicy:
